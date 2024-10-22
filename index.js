@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import chalk from "chalk";
 import figlet from "figlet";
 import { select, Separator, input } from "@inquirer/prompts";
@@ -90,8 +92,10 @@ const spinner = createSpinner("Provisioning a Rstudio").start();
 
 const HOST = "115.246.211.178";
 const PORT = 61002;
-const USERNAME = process.env.SSH_USERNAME;
-const PASSWORD = process.env.SSH_PASSWORD;
+const USERNAME = "pradeept";
+// const USERNAME = process.env.SSH_USERNAME;
+const PASSWORD = "pass@#$";
+// const PASSWORD = process.env.SSH_PASSWORD;
 const DEPLOYMENT_PORT = Math.floor(Math.random() * (6000 - 5000) + 5000);
 
 const conn = new Client();
@@ -131,3 +135,9 @@ conn
     username: USERNAME,
     password: PASSWORD,
   });
+
+
+  // Enchancements:
+
+  // - Add volume
+  // - Add domain & SSL cert
